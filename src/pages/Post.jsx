@@ -58,7 +58,7 @@ const Post = () => {
   const fetchUserData = () => {
     axios.get(`https://dummyapi.io/data/v1/user?created=1`, {
       headers: {
-        "app-id": "62996cb2689bf0731cb00285"
+        "app-id": process.env.REACT_APP_ID
       },
     })
     .then((response) => {
@@ -84,7 +84,7 @@ const Post = () => {
     axios
       .delete(`https://dummyapi.io/data/v1/post/${deletePostId}`, {
         headers: {
-          'app-id': '62996cb2689bf0731cb00285',
+          'app-id': process.env.REACT_APP_ID,
         },
       })
       .then((response) => {
@@ -149,7 +149,7 @@ const Post = () => {
         method: showCreateModal ? "post" : "put",
         data: formData,
         headers: {
-          "app-id": "62996cb2689bf0731cb00285",
+          "app-id": process.env.REACT_APP_ID,
         },
       })
       .then((response) => {

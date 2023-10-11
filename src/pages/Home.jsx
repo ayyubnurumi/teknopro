@@ -20,7 +20,7 @@ const Home = () => {
 
     axios.get(url, {
       headers: {
-        "app-id": "62996cb2689bf0731cb00285"
+        "app-id": process.env.REACT_APP_ID
       },
     })
     .then((response) => {

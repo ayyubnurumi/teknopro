@@ -27,6 +27,8 @@ Currently, two official plugins are available:
   npm install
 ```
 
+- Copy .env.example than rename it to .env or just rename it
+
 - Start the server
 
 ```bash
