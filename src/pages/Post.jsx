@@ -58,7 +58,7 @@ const Post = () => {
   const fetchUserData = () => {
     axios.get(`https://dummyapi.io/data/v1/user?created=1`, {
       headers: {
-        "app-id": process.env.REACT_APP_ID
+        "app-id": '62996cb2689bf0731cb00285'
       },
     })
     .then((response) => {
@@ -84,7 +84,7 @@ const Post = () => {
     axios
       .delete(`https://dummyapi.io/data/v1/post/${deletePostId}`, {
         headers: {
-          'app-id': process.env.REACT_APP_ID,
+          'app-id': '62996cb2689bf0731cb00285'
         },
       })
       .then((response) => {
@@ -149,7 +149,7 @@ const Post = () => {
         method: showCreateModal ? "post" : "put",
         data: formData,
         headers: {
-          "app-id": process.env.REACT_APP_ID,
+          "app-id": '62996cb2689bf0731cb00285'
         },
       })
       .then((response) => {
@@ -254,7 +254,7 @@ const Post = () => {
             <label className='capitalize' htmlFor="owner">owner</label>
             <select className="rounded border px-2 bg-slate-100 focus:bg-slate-50 focus:outline-none focus:border-blue-300" name="owner" id="owner" onSelect={handleInputChange} defaultValue={formData.owner}>
               {users.map(user=> (
-                <option value={user}>{user.firstName} {user.lastName}</option>
+                <option key={user.id} value={user}>{user.firstName} {user.lastName}</option>
               ))}
               {/* <option value="mr">Mr.</option>
               <option value="mrs">Mrs.</option>

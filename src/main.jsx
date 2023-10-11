@@ -12,7 +12,6 @@ import User from './pages/User.jsx';
 import Post from './pages/Post.jsx';
 import Home from './pages/Home.jsx';
 
-
 const router = createBrowserRouter([
   {
     path: "/",
